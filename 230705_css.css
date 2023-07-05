@@ -1,0 +1,111 @@
+/* div {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  background-color: lightgray;
+} */
+
+/* 전체 선택자 */
+/* * {
+  color: red;
+} */
+
+/* 태그 선택자 */
+/* span {
+  color: red;
+} */
+
+/* 클래스 선택자
+.orange {
+  color: orange;
+}
+
+아이디 선택자 #orange {
+  color: blue;
+} */
+
+/* * {
+  background-color: gray;
+  color: white;
+}
+
+span {
+  background-color: red;
+}
+
+#first {
+  background-color: blue;
+}
+.second {
+  background-color: green;
+} */
+
+span.orange {
+  color: red;
+}
+
+ul > .orange {
+  background-color: gray;
+}
+
+ul .orange {
+  font-weight: bold;
+}
+
+.orange + li {
+  font-size: 30px;
+}
+/* 바로 다음 요소에만 적용함 */
+
+.orange ~ li {
+  color: green;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: white;
+  background-color: black;
+}
+
+input:focus {
+  background-color: lightgray;
+}
+
+/* .fruits span:nth-child(2) {
+  color: red;
+}
+
+.fruits div:first-child {
+  color: blue;
+}
+
+.fruits h3:last-child {
+  text-decoration: line-through;
+}
+
+.fruits p:last-child {
+  color: green;
+} */
+
+.fruits *:not(span) {
+  background-color: aqua;
+}
+
+.fruits::before {
+  content: "과일 목록 시작";
+}
+
+.fruits::after {
+  content: "과일 목록 끝";
+}
+
+input[readonly] {
+  background-color: orange;
+}
+
+input[type="password"] {
+  color: red;
+}
