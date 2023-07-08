@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>230708_수업</title>
+    <style>
+      img {
+        width: 100px;
+        height: 100px;
+      }
+      img:hover {
+        /* transform: translate(0, 70px); 이동 */
+        /* transform: scale(2); 크기 */
+        transform: rotateY(180deg);
+        /* transform: skew(-45deg, 45deg); 기울기 */
+        /* backface-visibility: hidden; 뒷면 여부 */
+      }
+      /* div {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        transition: width 2s ease 0.5s; 한번에 적을 때
+        transition-property: width;
+        transition-duration: 2s; 지속시간
+        transition-timing-function: ease;
+        transition-delay: 0.5s;
+      }
+      div:hover {
+        width: 300px;
+      } */
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: cyan;
+        position: relative;
+        animation-name: myanim;
+        animation-duration: 2s;
+        animation-iteration-count: 3; /* 반복횟수 */
+        animation-timing-function: ease;
+        animation-delay: 1s; /* 초기 딜레이 */
+      }
+      /* 애니메이션 속성을 줄 때에는 같은 속성을 줘야함 */
+      @keyframes myanim {
+        0% {
+          left: 0px;
+          top: 10px;
+        }
+        25% {
+          left: 100px;
+          top: 20px;
+        }
+        50% {
+          left: 200px;
+          top: 30px;
+        }
+        75% {
+          left: 100px;
+          top: 40px;
+        }
+        100% {
+          left: 0px;
+          top: 50px;
+        }
+      }
+    </style>
+    <script>
+      // var : 재선언 가능, 재할당 가능 / 최대한 안 쓰는게 좋다
+      // let : 재선언 불가능, 재할당 가능 / 권장함
+      // const : 바로 선언 + 할당 / 재선언, 재할당 불가능
+      var a; // 선언
+      var a = "안녕"; // 선언+할당
+      a = "홍길동"; // 할당
+      console.log(a);
+
+      let b;
+      b = "잘가";
+    </script>
+  </head>
+  <body>
+    <img src="./pngwing.com.png" alt="cat" />
+    <br />
+    <div></div>
+  </body>
+</html>
