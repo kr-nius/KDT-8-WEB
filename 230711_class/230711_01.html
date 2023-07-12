@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>230711_01</title>
+    <script>
+      let colors = [
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "navy",
+        "purple",
+      ];
+      console.log(colors[2]);
+      colors.push("black");
+      console.log(colors);
+      console.log(colors.indexOf("black"));
+      console.log(colors.reverse());
+
+      console.log(`${typeof 1} isn't ${typeof "문자"} data type.`);
+      console.log(
+        `Typeof를 boolean 이나 null에 사용하면, ${typeof null}의 결과를 얻을 수 있습니다.`
+      );
+
+      // 실습 4
+      //   let mathScore = prompt("수학 점수를 입력 하세요");
+      //   let engScore = prompt("영어 점수를 입력 하세요");
+
+      let mathScore = "77";
+      console.log("수학 점수:", mathScore);
+      let engScore = "88";
+      console.log("영어 점수:", engScore);
+
+      let avg = (Number(mathScore) + Number(engScore)) / 2;
+      console.log("평균 점수:", avg);
+    </script>
+  </head>
+  <body></body>
+</html>

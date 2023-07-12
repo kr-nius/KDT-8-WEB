@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>230712_01</title>
+    <script>
+      // 실습 1
+      let arr = [];
+      for (let i = 1; i < 101; i++) {
+        arr.push(i);
+      }
+      console.log("arr: ", arr);
+
+      var sum1 = 0;
+      for (let a = 0; a < arr.length; a++) {
+        // console.log(arr[a]);
+        sum1 = sum1 + arr[a];
+      }
+      console.log("for문 합: ", sum1);
+
+      var sum2 = 0;
+      for (let ar of arr) {
+        sum2 = sum2 + ar;
+      }
+      console.log("for-of문 합: ", sum2);
+
+      var sum3 = 0;
+      arr.forEach((ar) => {
+        sum3 = sum3 + ar;
+      });
+      console.log("forEach문 합: ", sum3);
+
+      // 실습 2
+      //   let fruits1 = [
+      //     "사과",
+      //     "딸기",
+      //     "파인애플",
+      //     "수박",
+      //     "참외",
+      //     "오렌지",
+      //     "자두",
+      //     "망고",
+      //   ];
+      //   let fruits2 = ["수박", "사과", "참외", "오렌지", "파인애플", "망고"];
+
+      //   let same = [];
+      //   let diff = [];
+
+      function solution(num) {
+        if (num % 2 === 0) {
+          console.log("Even");
+        } else {
+          console.log("Odd");
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

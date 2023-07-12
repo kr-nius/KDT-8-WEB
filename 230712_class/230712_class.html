@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>230712_class</title>
+    <script>
+      // 문자열 관련 메소드
+      let str = " Happy Day~!";
+      // 1. 문자열 길이 확인
+      console.log("lenght: ", str.length);
+
+      // 2. 문자열을 모두 대문자로 바꾸기(영어)
+      console.log("toUpperCase: ", str.toUpperCase());
+      console.log("toLowerCase: ", str.toLowerCase());
+
+      // 3. index를 가져오기
+      console.log("index: ", str.indexOf("d"));
+      console.log("index: ", str.lastIndexOf("y"));
+
+      // 4.문자열 자르기 (첫번째는 필수, 두번째는 선택)
+      console.log("slice: ", str.slice(0, 5));
+
+      // 5. 바꾸기
+      // replace: 제일 먼저 찾아지는 한 친구만 바꾼다.
+      console.log("replace p -> a : ", str.replace("p", "a"));
+      //replceAll 찾아지는 모든 요소를 바꿈
+      console.log("replaceAll a -> k : ", str.replaceAll("a", "k"));
+
+      // 6. 반복
+      console.log("repeat: ", str.repeat(10));
+
+      // 7.split: 문자열을 내가 원하는 부분에서 자르고, 그걸 리스트로 만들어줌
+      // 기준이 되는 값은 사라짐
+      console.log("split: ", str.split(""));
+      console.log("split: ", str.split(" "));
+      console.log("split: ", str.split("a"));
+
+      // 8. trim(): 좌우 공백 제거
+      console.log("trim 전: ", str);
+      console.log("trim 후: ", str.trim());
+
+      // 배열 관련 메소드
+      let days = ["M", "T", "W", "T", "F", "S", "S"];
+      console.log("days: ", days);
+      // 0. 길이
+      console.log("length: ", days.length);
+
+      // 1. 마지막 요소 추가/삭제
+      // push(): 마지막 위치에 원하는 만큼 요소를 추가 / 추가 후의 리스트 길이를 반환
+      let pushResult = days.push("z", "a");
+      console.log("push: ", days);
+      console.log("push:Result ", pushResult);
+
+      // pop(): 마지막 위치의 요소를 추출해 반환해준다. (추출하기 떄문에 리스트에서는 삭제)
+      let popResult = days.pop();
+      days.pop();
+      console.log("pop: ", days);
+      console.log("popResult: ", popResult);
+
+      // 2. 맨 앞 요소 추가/삭제
+      // unshif: 첫번째 위치에 원하는만큼 요소를 추가하고 추가된 이후의 리스트 길이를 반환
+      let unshiftResult = days.unshift("r", "e");
+      console.log("unshift: ", days);
+      console.log("unshiftResult", unshiftResult);
+
+      // shift: 첫번째위치의 요소를 추출해 반환해준다(추출하기 때문에 리스트에서는 삭제)
+      let shiftResult = days.shift();
+      console.log("shift: ", days);
+      console.log("shiftResult", shiftResult);
+
+      // 3. 인덱스 가져오기
+      // indexof(찾을요소,검색을 시작할 인덱스 번호)
+      console.log("indexOf T: ", days.indexOf("T"));
+      console.log("indexOf T2: ", days.indexOf("T", 3));
+
+      // 4. includes() 포함유무
+      // includes(찾을요소, 검색을 시작할 인덱스 번호)
+      //요소를 찾고, 그에 대한 결과를 boolean 타입으로 반환
+      console.log("includes S", days.includes("S"));
+      console.log("includes S", days.includes("B"));
+
+      // 5. reverse() 반전시키는 함수
+      console.log("reverse: ", days.reverse());
+
+      // 6. join() 배열을 연결해서 문자열로 가져온다.
+      console.log("join: ", days.join());
+      console.log("join: ", days.join("&"));
+      console.log("join: ", days.join(" "));
+
+      console.log("--------------------------------");
+      let stR = "Holiday";
+      console.log("stR: ", stR);
+      // 메소드 체이닝 : 각각의 다른 메소드를 연결해 사용하는 개념
+      // 메소드에 return 값이 있을 떄만 사용 가능
+      console.log("total: ", stR.split("").reverse().join(""));
+
+      let a = 1;
+      console.log("a: ", a);
+      let b = a;
+      console.log("b: ", b);
+      b += 1;
+      console.log("b: ", b);
+
+      let arr1 = [1, 2, 3];
+      let arr2 = [...arr1]; // deep copy
+      let arr3 = arr2;
+      let arr4 = arr1; // shallow copy
+      arr2.push(4);
+      console.log("arr1: ", arr1);
+      console.log("arr2: ", arr2);
+      console.log("arr3: ", arr3);
+      console.log("arr4: ", arr4);
+    </script>
+  </head>
+  <body></body>
+</html>

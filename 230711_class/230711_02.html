@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>230711_02</title>
+    <script>
+      // 실습 1, 2
+      //   function multifly(a, b) {
+      //     console.log(a * b);
+      //   }
+      //   multifly(3, 7);
+
+      //   function square(c) {
+      //     console.log(c ** 4);
+      //   }
+      //   square(4);
+      //   square(11);
+
+      // 실습 3
+      //   let a = prompt("첫번째 숫자를 입력해주세요.");
+      //   a = Number(a);
+      //   let b = prompt("두번째 숫자를 입력해주세요.");
+      //   b = Number(b);
+
+      //   function add() {
+      //     let result = a + b; // a와 b는 전역 변수 result 는 지역 변수
+      //     alert(result);
+      //   }
+      //   function sub() {
+      //     alert(a - b);
+      //   }
+      //   function divide() {
+      //     alert(a * b);
+      //   }
+      //   function mul() {
+      //     alert(a / b);
+      //   }
+
+      // 실습 4
+      //   let age = prompt("나이를 입력해주세요.");
+      //   age = Number(age);
+      //   if (age >= 20) {
+      //     alert("성인");
+      //   } else if (age >= 17) {
+      //     alert("고등학생");
+      //   } else if (age >= 14) {
+      //     alert("중학생");
+      //   } else if (age >= 8) {
+      //     alert("초등학생");
+      //   } else if (age >= 0) {
+      //     alert("유아");
+      //   }
+
+      //실습 5 if 중첩문
+
+      //실습 6
+      //   let now = new Date().getHours();
+      //   now >= 13 ? console.log("오후") : console.log("오전");
+
+      //실습 7
+      for (let i = 0; i < 1001; i++) {
+        if (i % 13 == 0 && i % 2 == 1) {
+          console.log(i);
+        }
+      }
+
+      //실습 8
+      for (let g = 2; g < 10; g++) {
+        console.log(g + "단");
+      }
+
+      //실습 9
+      let sum = 0;
+      for (let i = 0; i < 100; i++) {
+        if (i % 2 == 0 || i % 3 == 0) sum += i;
+      }
+      console.log("sum : ", sum);
+    </script>
+  </head>
+  <body>
+    <!-- 실습 3
+    <button onclick="add()">더하기</button>
+    <button onclick="sub()">빼기</button>
+    <button onclick="divide()">곱하기</button>
+    <button onclick="mul()">나누기</button> -->
+  </body>
+</html>

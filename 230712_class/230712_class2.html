@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>230712_02</title>
+    <script>
+      // array를 반복문 돌릴 거예요.
+
+      let fruits = ["apple", "banana", "melon", "cherry", "grape"];
+      console.log("Fruits: ", fruits);
+      console.log("apple: ", fruits[0]); //특정한 값을 가져올 때는? 배열[인덱스]
+      console.log("--------------------");
+      // 기본 for문
+      for (let i = 0; i < fruits.length; i++) {
+        console.log("i: ", i);
+        console.log("fruits: ", fruits[i]);
+      }
+      console.log("--------------------");
+      //for(변수 of 배열) : 배열에 있는 요소를 하나씩 변수로 가져온다.
+      for (let f of fruits) {
+        console.log("for-of: ", f);
+      }
+      console.log("--------------------");
+      //forEach(함수)
+      //배열.forEach(변수, 인덱스, 배열)=>{}
+      fruits.forEach((f, index, arr) => {
+        console.log("f: ", f);
+        console.log("index: ", index);
+        console.log("arr: ", arr);
+      });
+
+      // 표준 객체: 자바스크립트에 기본적으로 내장되어 있는 친구들
+      // String, Number, Array 등
+
+      // Date: 자바스크립트에서 시간과 날짜에 대한 정보를 얻기 위해 사용되는 객체
+      // 초기화 (new) 후 사용 가능
+      // new Date(): 현재 시간
+      // new Date(년, 월, 일, 시, 분, 초, 밀리초): 입력한 특정 시간
+      let date = new Date();
+      console.log(Date.now()); // 기준시간으로부터 지금까지 지난 밀리초
+
+      // Date 객체
+      console.log(date.getFullYear()); // 초기화한 시간의 연도
+      console.log(date.getDate()); // 날짜
+      console.log(date.getDay()); // 요일의 index 일요일 (0), 월요일(1) ...
+      console.log(date.getTime()); // 내가 기준으로 잡은 시간이 기준 시간으로부터 얼마나 지났는지를 밀리초
+      console.log(date.getHours()); // 현재 시
+      console.log(date.getMinutes()); // 현재 분
+      console.log(date.getSeconds()); // 현재 초
+      // yyyy-mm-dd
+      let year = date.getFullYear();
+      let month = date.getMonth() + 1;
+      let day = date.getDay();
+
+      console.log(`${year}-${month}-${day}`);
+
+      // Math: 수학적인 계산을 하기 위해 사용
+      // Math 객체 안의 메소드
+      // (1) min : 최솟값
+      // (2) max : 최댓값
+      // (3) random : 랜덤한 수를 추출
+      // (4) round, floor, ceil
+      // round() : 반올림 / floor() : 내림 / ceil() : 올림
+    </script>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+      }
+      .div1 {
+        background-color: red;
+      }
+      .div2 {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">1</div>
+    <div class="div2">2</div>
+    <div class="div1">3</div>
+    <div class="div2">4</div>
+    <div class="div1">5</div>
+    <script>
+      // querySelector: 위에서부터 선택자에 일치하는 요소 하나만 가져온다.
+      console.log(document.querySelector(".div2")); // 선택자
+      // querySelectorAll: 선택자에 일치하는 모든 요소를 배열 형태로 가져온다.
+      console.log(document.querySelectorALL(".div2")); // 선택자
+      console.log(document.querySelectorALL(".div2")[1]); // 선택자
+    </script>
+  </body>
+</html>
