@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+      integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c="
+      crossorigin="anonymous"
+    ></script>
+    <title>230714_실습1</title>
+    <style>
+      .div1 {
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+        position: flex;
+      }
+
+      .div2 {
+        width: 250px;
+        height: 250px;
+        border: 5px solid rgba(236, 167, 19, 0.995);
+        border-radius: 30px;
+        font-size: 50px;
+        font-weight: 100px;
+      }
+
+      button {
+        width: 30px;
+        height: 30px;
+        color: white;
+        background-color: black;
+        font-size: 5;
+      }
+    </style>
+    <script>
+      function changeImg(name) {
+        $("img").attr("src", `${name}.png`);
+      }
+    </script>
+  </head>
+
+  <body>
+    <img width="100px" height="100px" src="" alt="사과" />
+    <div class="div1">
+      <div class="div2">과일을 골라볼게요</div>
+      <button onclick="changeImg('apple')">사과</button>
+      <button onclick="banana()">바나나</button>
+      <button onclick="grape()">포도</button>
+      <button onclick="peach()">복숭아</button>
+    </div>
+  </body>
+</html>

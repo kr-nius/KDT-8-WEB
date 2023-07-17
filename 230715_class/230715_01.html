@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <title>230715_실습1</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a
+        ><i class="bi bi-emoji-dizzy"></i> 배고파요
+        <i class="bi bi-emoji-dizzy"></i>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px"
+          >
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">점심</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">저녁</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                간식
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">커피</a></li>
+                <li><a class="dropdown-item" href="#">스무디</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">구움과자</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="물어보세요"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              <i class="bi bi-balloon-heart"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <br />
+    <div
+      class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary"
+    >
+      <div class="col-md-6 p-lg-5 mx-auto my-5">
+        <h1 class="display-3 fw-bold">오늘의 메뉴</h1>
+        <h3 class="fw-normal text-muted mb-3">맛있겠다</h3>
+        <div class="d-flex gap-3 justify-content-center lead fw-normal">
+          <a class="icon-link" href="#">
+            더보기>
+            <svg class="bi"><use xlink:href="#chevron-right" /></svg>
+          </a>
+          <a class="icon-link" href="#">
+            주문하기>
+            <svg class="bi"><use xlink:href="#chevron-right" /></svg>
+          </a>
+        </div>
+      </div>
+      <div class="product-device shadow-sm d-none d-md-block"></div>
+      <div
+        class="product-device product-device-2 shadow-sm d-none d-md-block"
+      ></div>
+    </div>
+    <br />
+    <div
+      style="display: flex; flex-wrap: nowrap; justify-content: space-evenly"
+    >
+      <div class="card" style="width: 300px; height: 400px">
+        <div
+          class="card-img-top"
+          style="width: 300px; height: 200px; background-color: antiquewhite"
+        ></div>
+        <div class="card-body">
+          <h5 class="card-title">테스트1</h5>
+          <p class="card-text">
+            매일 음식을 고르는 것은 즐거운 일이다. 세상에는 맛있는게 정말 많아!
+          </p>
+          <a href="#" class="btn btn-primary">냠냠</a>
+        </div>
+      </div>
+      <div class="card" style="width: 300px; height: 400px">
+        <div
+          class="card-img-top"
+          style="width: 300px; height: 200px; background-color: antiquewhite"
+        ></div>
+        <div class="card-body">
+          <h5 class="card-title">테스트2</h5>
+          <p class="card-text">
+            매일 음식을 고르는 것은 즐거운 일이다. 세상에는 맛있는게 정말 많아!
+          </p>
+          <a href="#" class="btn btn-primary">냠냠</a>
+        </div>
+      </div>
+      <div class="card" style="width: 300px; height: 400px">
+        <div
+          class="card-img-top"
+          style="width: 300px; height: 200px; background-color: antiquewhite"
+        ></div>
+        <div class="card-body">
+          <h5 class="card-title">테스트3</h5>
+          <p class="card-text">
+            매일 음식을 고르는 것은 즐거운 일이다. 세상에는 맛있는게 정말 많아!
+          </p>
+          <a href="#" class="btn btn-primary">냠냠</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
