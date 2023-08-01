@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      div {
+        border: solid 1px gray;
+        display: inline-block;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <h4>GET으로 정보받기</h4>
+    <form action="/getForm2" method="get">
+      이름<input type="text" name="id" /><br />
+      <div>
+        성별 <br />
+        <input type="radio" name="sex" value="남자" />남자
+        <input type="radio" name="sex" value="여자" /> 여자
+      </div>
+      <br />
+      <div>
+        생년월일 <br />
+        <input type="select" />년 <input type="select" />월
+        <input type="select" />일
+      </div>
+      <br />
+      <div>
+        관심사 <br />
+        <input type="checkbox" name="like" />여행
+        <input type="checkbox" name="like" />패션
+        <input type="checkbox" name="like" />음식
+      </div>
+
+      <button type="submit">회원가입</button>
+    </form>
+    <!--버튼은 type 안적혀 있으면 기본 submit-->
+    <hr />
+    <h4>POST 요청</h4>
+    <form action="/postForm2" method="post">
+      <input type="text" placeholder="id" name="id" readonly />
+      <input
+        type="password"
+        placeholder="pw"
+        name="pw"
+        pattern="^([a-z0-9]){8,12}"
+      />
+      <input type="email" required /><br />
+      <input type="radio" /><br />
+      <input type="checkbox" /><br />
+      <input type="tel:010" /><br />
+      <input type="number" /><br />
+      <input type="date" /><br />
+      <input type="time" /><br />
+      <button type="submit">제출</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 배열 구조 분해 (순서 중요)
+      const lists = ["apple", "grape"];
+      // console.log(lists[0], lists[1]); //기존방식
+      [item1, item2, item3 = "banana"] = lists;
+      // console.log(item1, item2, item3); //구조분해
+      //교환
+      let x = 1,
+        y = 3;
+      [x, y] = [y, x];
+      // console.log(x, y);
+
+      // 객체
+      const Person = {
+        // key: value
+        name: "ju",
+        age: 19,
+        gender: "F",
+        friends: ["Alex", "Kevin"],
+        hello: function () {
+          console.log("Hello");
+        },
+        "j-1": "America",
+      };
+      console.log(Person.name);
+      Person.age = 21; // 값 바꾸기
+      console.log(Person.age);
+      console.log(Person.friends[1]);
+      Person.hello();
+      console.log(Person["name"]);
+      console.log(Person["j-1"]); //특수문자가 들어간 경우 대괄호로 접근
+      Person.city = "Seoul"; // 없는 값 추가
+      console.log(Person);
+      // 예시
+      const Persons = [{}, {}, {}];
+      // 객체 구조 분해 (key 값 중요)
+      const { name, city, gender, key1 = "Hi" } = Person;
+      console.log(name, city, gender, key1);
+    </script>
+  </body>
+</html>
