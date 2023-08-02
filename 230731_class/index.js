@@ -16,6 +16,7 @@ app.get("/", (req, res) => {
   res.render("index", { title: "폼 실습" });
 });
 
+// 결과 받는 페이지
 app.get("/getForm", (req, res) => {
   console.log(req.query);
   res.render("result", {
