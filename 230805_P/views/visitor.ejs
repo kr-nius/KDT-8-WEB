@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>방명록 등록</title>
   </head>
   <body>
-    <form>
+    <form name="visitor-form">
       <fieldset>
         <legend>방명록 등록</legend>
-        <input type="text" placeholder="사용자 이름" /><br />
-        <input type="text" placeholder="방명록" /><br />
-        <button type="button">등록</button>
+        <input type="text" name="name" placeholder="사용자 이름" /><br />
+        <input type="text" name="comment" placeholder="방명록" /><br />
+        <button type="button" onclick="registerComment()">등록</button>
       </fieldset>
     </form>
     <br />
@@ -37,5 +38,20 @@
         <% } %>
       </tbody>
     </table>
+    <script>
+      function registerComment() {
+        const form = document.forms["visitor-form"];
+        axios({
+          method: "post",
+          url: "/visitor/wirte",
+          data: {
+            name: form.name.value,
+            comment: form.comment.value,
+          },
+        }).then((res) => {
+          console.log("res", res);
+        });
+      }
+    </script>
   </body>
 </html>

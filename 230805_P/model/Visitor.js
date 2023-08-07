@@ -24,6 +24,7 @@ const conn = mysql.createConnection({
 });
 
 // mysql 연결 후
+// 방명록 보기
 exports.getVisitors = (callback) => {
   const sql = "SELECT * FROM visitor;";
   conn.query(sql, (err, rows) => {
@@ -32,3 +33,8 @@ exports.getVisitors = (callback) => {
     callback(rows);
   });
 };
+
+// 방명록 등록
+// exports.postVisitors = (callback) => {
+//   const sqlIn = "INSERT INTO visitor (name, comment) values ('', '');";
+// }
