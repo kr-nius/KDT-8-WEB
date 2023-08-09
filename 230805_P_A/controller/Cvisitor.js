@@ -1,4 +1,4 @@
-const Visitor = require("../model/Mvisitor");
+const Visitor = require("../model/Mvisitor"); //model은 DB
 
 // 방명록 전체 조회
 exports.getVisitors = (req, res) => {

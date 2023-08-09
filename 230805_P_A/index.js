@@ -93,5 +93,5 @@ app.use("*", (req, res) => {
 
 // 포터 열기
 app.listen(PORT, () => {
-  console.log(`http://localhost${PORT}`);
+  console.log(`http://localhost:${PORT}`);
 });

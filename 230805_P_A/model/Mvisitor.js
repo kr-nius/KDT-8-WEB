@@ -1,3 +1,5 @@
+// 데이터베이스(DB) 관리 부분
+
 // mysql 연결 파일
 const mysql = require("mysql");
 const conn = mysql.createConnection({
@@ -14,6 +16,8 @@ conn.connect((err) => {
   console.log("connect");
 });
 
+// Cvisitor랑 연결
+// 방명록 전체 조회
 exports.getVisitors = (callback) => {
   console.log(conn);
   const query = "SELECT * FROM visitor;";
