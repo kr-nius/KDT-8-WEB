@@ -27,7 +27,7 @@ exports.postSignup = (data, callback) => {
       return;
     }
     console.log("post_signup: ", rows);
-    callback(rows);
+    callback();
   });
 };
 
@@ -46,8 +46,9 @@ exports.postSignin = (data, callback) => {
   });
 };
 
+// 로그인 성공 후 프로필
 exports.postProfile = (data, callback) => {
-  const query = `SELECT * FROM user08 WHERE userid='${dara.profile};`;
+  const query = `SELECT * FROM user08 WHERE userid='${data.profile}';`;
   conn.query(query, (err, rows) => {
     if (err) {
       console.log(err);
@@ -55,5 +56,21 @@ exports.postProfile = (data, callback) => {
     }
     console.log("postProfile: ", rows);
     callback(rows);
+  });
+};
+
+// 프로필 수정
+exports.editProfile = (data, callback) => {
+  const query = `UPDATE user08 SET userid='${data.userid}', pw='${data.pw}', name='${data.name}' WHERE id=${data.id};`;
+  conn.query(query, (err, rows) => {
+    callback();
+  });
+};
+
+// 프로필 삭제
+exports.deleteProfile = (id, callback) => {
+  const query = `DELETE FROM user08 WHERE id=${id};`;
+  conn.query(query, (err, rows) => {
+    callback();
   });
 };

@@ -28,4 +28,6 @@ router.patch("/profile/edit", controller.editProfile);
 // 정보 삭제
 router.delete("/profile/delete", controller.deleteProfile);
 
+router.get("/findall", controller.findall);
+
 module.exports = router;

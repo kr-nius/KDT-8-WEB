@@ -1,3 +1,5 @@
+// controller 파일 DB와 router 연결해 줌
+
 const User = require("../model/User");
 
 // main home
@@ -47,5 +49,20 @@ exports.postProfile = (req, res) => {
     } else {
       res.redirect("/user/signin");
     }
+  });
+};
+
+// 프로필 수정
+exports.editProfile = (req, res) => {
+  console.log(req.body);
+  User.editProfile(req.body, () => {
+    res.send({ result: true });
+  });
+};
+
+// 프로필 삭제
+exports.deleteProfile = (req, res) => {
+  User.deleteProfile(req.body.id, () => {
+    res.send({ result: true });
   });
 };
