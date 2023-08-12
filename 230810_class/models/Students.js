@@ -1,23 +1,23 @@
 const { DataTypes } = require("sequelize");
 
 const studentModel = (sequelize) => {
-  const Student = sequelize.define("student", {
+  const Student = sequelize.define("Student", {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
-      type: DataTypes.STRING(15),
-      allowNull: false,
-    },
-    major: {
+    userid: {
       type: DataTypes.STRING(31),
       allowNull: false,
     },
-    enroll: {
-      type: DataTypes.INTEGER,
+    email: {
+      type: DataTypes.STRING(63),
+      allowNull: true,
+    },
+    password: {
+      type: DataTypes.STRING(255),
       allowNull: false,
     },
   });

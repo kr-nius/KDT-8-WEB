@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize");
 
 const classModel = (sequelize) => {
-  const Classes = sequelize.define("classes", {
+  const Classes = sequelize.define("Classes", {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
