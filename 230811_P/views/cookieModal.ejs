@@ -3,25 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>쿠키 실습</title>
   </head>
   <body>
-    <div class="modal" tabindex="-1">
+    <h1>Cookie 실습</h1>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">안내사항</h5>
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">안내사항</h1>
             <button
               type="button"
               class="btn-close"
@@ -29,21 +35,43 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">
-            <p>안뇽</p>
-          </div>
+          <div class="modal-body">안뇽 !</div>
           <div class="modal-footer">
+            <input type="checkbox" id="cookie" />
+            <label for="cookie">오늘 하루 보지않음</label>
             <button
               type="button"
               class="btn btn-secondary"
               data-bs-dismiss="modal"
+              onclick="closeModal()"
             >
-              Close
+              닫기
             </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
     </div>
+    <script>
+      const modal = new bootstrap.Modal("#staticBackdrop");
+      //show(): 수동으로 모달을 엶
+      console.log("popup value: ", "<%= popup %>");
+      // 빈 값이면 show, 값이 있으면 no show
+      if ("<%= popup %>" === "") {
+        modal.show();
+      }
+
+      function closeModal() {
+        console.log("close modal");
+        if (document.getElementById("cookie").checked) {
+          axios({
+            method: "post",
+            url: "/setCookie",
+          }).then((res) => {
+            console.log("res: ", res.data);
+          });
+          // console.log(true); // 체크박스 잘 되는지 확인용
+        }
+      }
+    </script>
   </body>
 </html>
