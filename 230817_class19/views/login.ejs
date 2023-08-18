@@ -1,0 +1,42 @@
+<!-- 230817 JWT 실습  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Token 로그인</title>
+  </head>
+  <body>
+    <h1>Token 로그인</h1>
+    <form name="login-form">
+      <input type="text" name="id" placeholder="ID" /><br />
+      <input type="password" name="pw" placeholder="PW" /><br />
+      <button type="button" onclick="login()">로그인</button>
+    </form>
+    <script>
+      async function login() {
+        console.log("login"); // 함수 작동되는지 확인용
+        const form = document.forms["login-form"];
+        const res = await axios({
+          method: "post",
+          url: "/login",
+          data: {
+            id: form.id.value,
+            pw: form.pw.value,
+          },
+        });
+        if (res.data.result) {
+          console.log("res.data.result: ", res.data.result);
+          localStorage.setItem("login", res.data.token); // login은 로컬스토리지 키 이름
+          document.location.href = "/";
+        } else {
+          // 아이디나 비밀번호가 틀린 경우
+          alert(res.data.message);
+          document.location.reload();
+        }
+      }
+    </script>
+  </body>
+</html>
