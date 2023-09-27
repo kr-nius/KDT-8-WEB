@@ -1,0 +1,34 @@
+<!-- 0704 실습 2번 -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>input</title>
+  </head>
+  <body>
+    <h1>설문조사</h1>
+    이름 <input type="text" />
+    <br />
+    이메일 <input type="text" placeholder="ex@example.com" />
+    <br />
+    <p><b>나이</b></p>
+    <input type="radio" name="age" value="10대" checked /> 10대
+    <input type="radio" name="age" value="20대" /> 20대
+    <input type="radio" name="age" value="30대" /> 30대
+    <input type="radio" name="age" value="40대" /> 40대
+    <input type="radio" name="age" value="50대" /> 50대
+    <input type="radio" name="age" value="60대 이상" /> 60대 이상
+    <br />
+    <p><b>원하는 강의(복수응답가능합니다.)</b></p>
+    <input type="checkbox" name="class" value="html" checked />html
+    <input type="checkbox" name="class" value="javascript" />javascript
+    <input type="checkbox" name="class" value="css" />css
+    <br />
+    <br />
+    <textarea
+      cols="100"
+      rows="10"
+      placeholder="하고 싶은 말을 써주세요:)"
+    ></textarea>
+  </body>
+</html>

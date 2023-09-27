@@ -1,0 +1,106 @@
+<!-- 0706 수업 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akatab&family=Fasthand&family=Hind+Siliguri:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>230706_수업</title>
+    <style>
+      @font-face {
+        font-family: "TTWanjudaedunsancheB";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/TTWanjudaedunsancheB.woff2")
+          format("woff2");
+        font-weight: 700;
+        font-style: normal;
+      }
+      div p {
+        line-height: 200px;
+        text-align: center;
+        font-weight: 900;
+        font-size: 20px;
+        color: aquamarine;
+        text-decoration: underline;
+      }
+
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: beige;
+      }
+      .google {
+        color: blueviolet;
+        font-family: "Fasthand", cursive;
+      }
+      .noon {
+        font-family: "TTWanjudaedunsancheB";
+      }
+      a {
+        text-decoration: none; /*줄 없애주는 것*/
+      }
+      span {
+        display: inline-block; /* 이 함수로 사이즈 지정 가능하게 함 */
+        background-color: lightblue;
+        width: 100px; /* 인라인 태그는 사이즈 지정 불가 */
+        height: 100px; /* 인라인 태그는 사이즈 지정 불가 */
+        margin-right: 30px;
+      }
+      h1 {
+        background-color: yellow;
+        width: 100px;
+        height: 100px;
+      }
+      button {
+        border: 2px solid transparent; /* 외부 크기가 안달라지게 */
+      }
+      button:hover {
+        border: 2px solid orange;
+      }
+      .overflow {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>p 태그입니다.</p>
+    </div>
+    <p class="google">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam,
+      tempore? Magnam officiis placeat suscipit quasi odit incidunt tempora,
+      esse, molestiae quas consequatur optio quo reiciendis, vitae deserunt
+      delectus eligendi quam.
+    </p>
+    <p class="noon">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati,
+      officia enim ullam ex ab reprehenderit perspiciatis rerum id quos, modi
+      accusamus facere suscipit consectetur voluptatibus natus, beatae quod
+      asperiores maiores.
+    </p>
+    <a href="https://naver.com">네이버</a>
+    <span>span </span>
+    <span>span</span>
+    <h1>h1</h1>
+    <h1>h1</h1>
+    <div
+      style="
+        width: calc(100vw-200px);
+        max-width: 100px;
+        min-width: 70px;
+        height: 200px;
+        background-color: red;
+        margin: 10px 20px;
+      "
+    ></div>
+    <button style="padding: 10px">버튼</button>
+    <div class="overflow">오늘 점심 뭐 먹지?</div>
+  </body>
+</html>

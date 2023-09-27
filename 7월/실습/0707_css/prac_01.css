@@ -1,0 +1,31 @@
+/* 0707 실습 1번 */
+
+.container {
+  width: 500px;
+  height: 500px;
+  position: relative;
+}
+.item1 {
+  background-color: blueviolet;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  left: 50px;
+  top: 30px;
+}
+.item2 {
+  background-color: yellow;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: 30px;
+  bottom: 100px;
+}
+.item3 {
+  background-color: skyblue;
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  top: 100px;
+  right: 100px;
+}

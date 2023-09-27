@@ -1,0 +1,61 @@
+/* 0705 실습 */
+
+/* 2번 */
+/* * {
+  background-color: gray;
+  color: white;
+}
+
+span {
+  background-color: red;
+}
+
+#first {
+  background-color: blue;
+}
+.second {
+  background-color: green;
+} */
+
+/* -------------------------------------------------- */
+
+/* 3번 */
+.lion {
+  color: sienna;
+}
+
+p.lion {
+  background-color: red;
+}
+
+ul > .lion {
+  background-color: greenyellow;
+  font-weight: bold;
+}
+
+#tiger {
+  background-color: yellow;
+}
+
+li#tiger + li {
+  background-color: skyblue;
+}
+
+li.lion ~ li {
+  background-color: orange;
+}
+
+/* -------------------------------------------------- */
+
+/* 4번 */
+h1:hover {
+  color: red;
+}
+
+a:active {
+  background-color: blue;
+}
+
+input:focus {
+  background-color: orange;
+}

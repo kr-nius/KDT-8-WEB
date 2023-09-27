@@ -1,0 +1,49 @@
+<!-- 0707 실습 2번 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>230707_02</title>
+    <style>
+      .container {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        background-color: antiquewhite;
+      }
+      .item1 {
+        width: 100px;
+        height: 100px;
+        background-color: palevioletred;
+        position: absolute;
+        z-index: 3;
+      }
+      .item2 {
+        width: 100px;
+        height: 100px;
+        background-color: darksalmon;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+      }
+      .item3 {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        position: absolute;
+        top: 60px;
+        left: 60px;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item1"></div>
+      <div class="item2"></div>
+      <div class="item3"></div>
+    </div>
+  </body>
+</html>

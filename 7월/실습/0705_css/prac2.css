@@ -1,0 +1,37 @@
+/* 0705 실습 */
+
+/* 5번 */
+.stripes div:nth-child(2n + 1) {
+  background-color: navy;
+  color: white;
+}
+
+.stripes div:nth-child(2n) {
+  background-color: yellow;
+}
+
+/* -------------------------------------------------- */
+
+/* 6번 */
+.box::before {
+  content: "택시 ";
+}
+
+.box::after {
+  content: " 빨리";
+}
+
+/* -------------------------------------------------- */
+
+/* 7번 */
+input[disabled] {
+  background-color: red;
+}
+
+input[placeholder="이름"] {
+  background-color: orange;
+}
+
+input:not([placeholder]) {
+  background-color: blue;
+}
